@@ -31,7 +31,8 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
             Profile profile,
             Address address,
             AnnouncementType announcementType,
-            ContactMethod? contactMethod) : base(id)
+            ContactMethod? contactMethod
+        ) : base(id)
         {
             Header = header;
             Description = description;
