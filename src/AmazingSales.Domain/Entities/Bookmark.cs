@@ -3,7 +3,7 @@ using AmazingSales.Domain.Entities.BadgeAnnouncement;
 
 namespace AmazingSales.Domain.Entities
 {
-    public class Bookmark
+    public sealed class Bookmark
     {
         public Profile Profile { get; private set; }
         public Announcement Announcement { get; private set; }

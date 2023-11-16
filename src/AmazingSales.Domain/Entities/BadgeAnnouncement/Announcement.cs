@@ -24,7 +24,6 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
             string description,
             decimal price,
             bool? autopublishing,
-            DateTime? created,
             PublicationStatus? publicationStatus,
             int views,
             Category category,
@@ -38,7 +37,7 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
             Description = description;
             Price = price;
             Autopublishing = autopublishing ?? true;
-            Created = created ?? DateTime.Now;
+            Created = DateTime.Now;
             PublicationStatus = publicationStatus ?? PublicationStatus.Draft;
             Views = views;
             Category = category;

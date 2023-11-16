@@ -2,7 +2,7 @@ using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Domain.Entities.BadgeAnnouncement
 {
-    public class Category : BaseEntity
+    public sealed class Category : BaseEntity
     {
         public Category Parent { get; private set; }
         public string Name { get; private set; }

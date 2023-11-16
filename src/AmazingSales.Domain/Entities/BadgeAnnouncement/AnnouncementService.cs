@@ -2,7 +2,7 @@ using AmazingSales.Domain.Entities.Enums;
 
 namespace AmazingSales.Domain.Entities.BadgeAnnouncement
 {
-    public class AnnouncementService
+    public sealed class AnnouncementService
     {
         public Announcement Announcement { get; private set; }
         public bool IsStartingPrice { get; private set; }
