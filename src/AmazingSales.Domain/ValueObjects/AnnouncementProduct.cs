@@ -1,6 +1,10 @@
-namespace AmazingSales.Domain.Entities.BadgeAnnouncement
+using AmazingSales.Domain.Enums;
+using AmazingSales.Domain.Common;
+using AmazingSales.Domain.Entities.BadgeAnnouncement;
+
+namespace AmazingSales.Domain.ValueObjects
 {
-    public sealed class AnnouncementProduct
+    public sealed record AnnouncementProduct : ValueObject
     {
         public Announcement Announcement { get; private set; }
         public int Amount { get; set; }
@@ -18,15 +22,14 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
             ProductStatus = productStatus;
             ProductSellingType = productSellingType;
         }
-    }
 
-    public enum ProductStatus
-    {
-        Fresh, Used
-    }
+        protected override IEnumerable<object> GetEqualityComponents()
+        {
+            yield return Announcement;
+            yield return Amount;
+            yield return ProductStatus;
+            yield return ProductSellingType;
+        }
 
-    public enum ProductSellingType
-    {
-        SellingMine, PurchasedForSale
     }
 }
