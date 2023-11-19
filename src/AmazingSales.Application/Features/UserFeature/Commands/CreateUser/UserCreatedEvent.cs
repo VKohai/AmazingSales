@@ -11,6 +11,5 @@ namespace AmazingSales.Application.Features.UserFeature.Commands.CreateUser
         {
             User = user;
         }
-
     }
 }
