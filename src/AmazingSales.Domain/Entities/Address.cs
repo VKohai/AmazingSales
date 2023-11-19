@@ -11,13 +11,12 @@ namespace AmazingSales.Domain.Entities
         public string? House { get; private set; }
         public string? Apartement { get; private set; }
         public Address(
-            long id,
             string country,
             string region,
             string city,
             string street,
             string? house,
-            string? apartement) : base(id)
+            string? apartement)
         {
             Country = country;
             Region = region;

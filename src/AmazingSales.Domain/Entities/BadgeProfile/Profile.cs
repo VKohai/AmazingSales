@@ -11,12 +11,11 @@ namespace AmazingSales.Domain.Entities.BadgeProfile
         public ProfileType ProfileType { get; private set; }
 
         public Profile(
-            long id,
             decimal rating,
             string? mainImageUrl,
             User user,
             ProfileType profileType
-        ) : base(id)
+        )
         {
             Rating = rating;
             MainImageUrl = mainImageUrl ?? string.Empty;

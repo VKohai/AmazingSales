@@ -19,7 +19,6 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
         public AnnouncementType AnnouncementType { get; private set; }
         public ContactMethod ContactMethod { get; private set; }
         public Announcement(
-            long id,
             string header,
             string description,
             decimal price,
@@ -31,7 +30,7 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
             Address address,
             AnnouncementType announcementType,
             ContactMethod? contactMethod
-        ) : base(id)
+        )
         {
             Header = header;
             Description = description;

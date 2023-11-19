@@ -10,12 +10,7 @@ namespace AmazingSales.Domain.Common
         [NotMapped]
         public IReadOnlyCollection<BaseEvent> DomainEvents => _domainEvents.AsReadOnly();
 
-        public long Id { get; init; }
-
-        protected BaseEntity(long id)
-        {
-            Id = id;
-        }
+        public long Id { get; set; }
 
         public void AddDomainEvent(BaseEvent domainEvent) => _domainEvents.Add(domainEvent);
         public void RemoveDomainEvent(BaseEvent domainEvent) => _domainEvents.Remove(domainEvent);

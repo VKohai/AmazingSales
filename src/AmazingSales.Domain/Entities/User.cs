@@ -8,7 +8,7 @@ namespace AmazingSales.Domain.Entities
         public string Phone { get; private set; }
         public string Email { get; private set; }
 
-        public User(long id, string name, string phone, string? email) : base(id)
+        public User(string name, string phone, string? email)
         {
             Name = name;
             Phone = phone;

@@ -6,7 +6,7 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
     {
         public Category Parent { get; private set; }
         public string Name { get; private set; }
-        public Category(long id, string name, Category parent) : base(id)
+        public Category(string name, Category parent)
         {
             Name = name;
             Parent = parent;

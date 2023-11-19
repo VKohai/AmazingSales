@@ -2,6 +2,6 @@ namespace AmazingSales.Domain.Common.Interfaces
 {
     public interface IEntity
     {
-        public long Id { get; init; }
+        public long Id { get; set; }
     }
 }

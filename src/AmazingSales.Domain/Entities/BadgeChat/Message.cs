@@ -12,12 +12,11 @@ namespace AmazingSales.Domain.Entities.BadgeChat
         public DateTime Created { get; private set; }
 
         public Message(
-            long id,
             Chat chat,
             Profile sender,
             string? messageText,
             string? attachmentUrl
-        ) : base(id)
+        )
         {
             Chat = chat;
             Sender = sender;
