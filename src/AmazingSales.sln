@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazingSales.Domain", "Amaz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazingSales.Infrastructure", "AmazingSales.Infrastructure\AmazingSales.Infrastructure.csproj", "{DA9EE5FD-E1DF-4621-A67D-87D0A669D585}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazingSales.Application", "AmazingSales.Application\AmazingSales.Application.csproj", "{04ED4B8E-7CB3-4F8F-B2AB-F8C6BC038377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{DA9EE5FD-E1DF-4621-A67D-87D0A669D585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9EE5FD-E1DF-4621-A67D-87D0A669D585}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9EE5FD-E1DF-4621-A67D-87D0A669D585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04ED4B8E-7CB3-4F8F-B2AB-F8C6BC038377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04ED4B8E-7CB3-4F8F-B2AB-F8C6BC038377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04ED4B8E-7CB3-4F8F-B2AB-F8C6BC038377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04ED4B8E-7CB3-4F8F-B2AB-F8C6BC038377}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

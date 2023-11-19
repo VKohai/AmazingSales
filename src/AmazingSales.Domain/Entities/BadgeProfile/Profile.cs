@@ -3,7 +3,7 @@ using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Domain.Entities.BadgeProfile
 {
-    public sealed class Profile : BaseEntity
+    public sealed class Profile : BaseAuditableEntity
     {
         public decimal Rating { get; private set; }
         public string? MainImageUrl { get; private set; }
