@@ -4,7 +4,7 @@ using AmazingSales.Domain.Entities.BadgeProfile;
 
 namespace AmazingSales.Domain.Entities.BadgeChat
 {
-    public sealed class Chat : BaseEntity
+    public sealed class Chat : BaseAuditableEntity
     {
         public Profile Seller { get; private set; }
         public Profile Customer { get; private set; }

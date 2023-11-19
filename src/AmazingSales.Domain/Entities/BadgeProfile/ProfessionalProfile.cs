@@ -2,7 +2,7 @@ using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Domain.Entities.BadgeProfile
 {
-    public sealed class ProfessionalProfile : BaseEntity
+    public sealed class ProfessionalProfile : BaseAuditableEntity
     {
         public Profile? Profile { get; private set; }
         public string AboutCompany { get; private set; }

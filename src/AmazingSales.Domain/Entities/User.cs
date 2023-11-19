@@ -2,7 +2,7 @@ using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Domain.Entities
 {
-    public sealed class User : BaseEntity
+    public sealed class User : BaseAuditableEntity
     {
         public string Name { get; private set; }
         public string Phone { get; private set; }

@@ -4,7 +4,7 @@ using AmazingSales.Domain.Entities.BadgeProfile;
 
 namespace AmazingSales.Domain.Entities.BadgeAnnouncement
 {
-    public sealed class Announcement : BaseEntity
+    public sealed class Announcement : BaseAuditableEntity
     {
         public string Header { get; private set; }
         public string Description { get; private set; }
