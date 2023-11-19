@@ -2,7 +2,7 @@ using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Domain.Entities
 {
-    public sealed class Address : BaseEntity
+    public sealed class Address : BaseAuditableEntity
     {
         public string Country { get; private set; }
         public string Region { get; private set; }
