@@ -21,7 +21,7 @@ namespace AmazingSales.Domain.Entities.BadgeChat
             Seller = seller;
             Customer = customer;
             Announcement = announcement;
-            Created = DateTime.Now;
+            Created = DateTime.UtcNow;
         }
     }
 }

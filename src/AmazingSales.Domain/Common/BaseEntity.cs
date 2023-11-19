@@ -1,15 +1,25 @@
 using AmazingSales.Domain.Common.Interfaces;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AmazingSales.Domain.Common
 {
     public abstract class BaseEntity : IEntity, IEquatable<BaseEntity>
     {
+        private readonly List<BaseEvent> _domainEvents = new();
+
+        [NotMapped]
+        public IReadOnlyCollection<BaseEvent> DomainEvents => _domainEvents.AsReadOnly();
+
         public long Id { get; init; }
 
         protected BaseEntity(long id)
         {
             Id = id;
         }
+
+        public void AddDomainEvent(BaseEvent domainEvent) => _domainEvents.Add(domainEvent);
+        public void RemoveDomainEvent(BaseEvent domainEvent) => _domainEvents.Remove(domainEvent);
+        public void ClearDomainEvents() => _domainEvents.Clear();
 
         public override bool Equals(object? obj)
         {

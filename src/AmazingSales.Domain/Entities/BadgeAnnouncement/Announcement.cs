@@ -37,7 +37,7 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
             Description = description;
             Price = price;
             Autopublishing = autopublishing ?? true;
-            Created = DateTime.Now;
+            Created = DateTime.UtcNow;
             PublicationStatus = publicationStatus ?? PublicationStatus.Draft;
             Views = views;
             Category = category;

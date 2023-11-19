@@ -23,7 +23,7 @@ namespace AmazingSales.Domain.Entities.BadgeChat
             Sender = sender;
             MessageText = messageText ?? string.Empty;
             AttachmentUrl = attachmentUrl ?? string.Empty;
-            Created = DateTime.Now;
+            Created = DateTime.UtcNow;
         }
     }
 }
