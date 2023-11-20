@@ -27,7 +27,7 @@ namespace AmazingSales.Application.Features.UserFeature.Commands.CreateUser
             var user = new User(request.Name!, request.Email!, request.Phone);
 
             // Adding the user in the database using the generic AddAsync method.
-            var createdUser = await _unitOfWork.Repository<User, long>().AddAsync(user);
+            user = await _unitOfWork.Repository<User, long>().AddAsync(user);
 
             // Adding the UserCreatedEvent event in the domain events collection
             // available in BaseEntity class.
@@ -37,7 +37,7 @@ namespace AmazingSales.Application.Features.UserFeature.Commands.CreateUser
             await _unitOfWork.Save(cancellationToken);
 
             // Return id of the new user
-            return createdUser.Id;
+            return user.Id;
         }
     }
 
