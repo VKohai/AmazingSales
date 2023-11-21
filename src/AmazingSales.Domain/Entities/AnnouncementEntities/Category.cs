@@ -1,6 +1,6 @@
 using AmazingSales.Domain.Common;
 
-namespace AmazingSales.Domain.Entities.BadgeAnnouncement
+namespace AmazingSales.Domain.Entities.AnnouncementEntities
 {
     public sealed class Category : BaseAuditableEntity
     {

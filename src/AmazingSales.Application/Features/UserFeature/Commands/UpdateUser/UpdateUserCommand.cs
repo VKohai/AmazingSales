@@ -21,7 +21,7 @@ namespace AmazingSales.Application.Features.UserFeature.Commands
             if (updatedUser is null)
                 return null;
 
-            updatedUser.AddDomainEvent(new UserUpdatedByIdEvent(updatedUser));
+            updatedUser.AddDomainEvent(new UserUpdatedEvent(updatedUser));
             await _unitOfWork.Save(cancellationToken);
             return updatedUser;
         }

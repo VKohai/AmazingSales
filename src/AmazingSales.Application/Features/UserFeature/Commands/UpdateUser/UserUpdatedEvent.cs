@@ -3,11 +3,11 @@ using AmazingSales.Domain.Entities;
 
 namespace AmazingSales.Application.Features.UserFeature.Commands
 {
-    public class UserUpdatedByIdEvent : BaseEvent
+    public class UserUpdatedEvent : BaseEvent
     {
         public User? User { get; }
 
-        public UserUpdatedByIdEvent(User? user)
+        public UserUpdatedEvent(User? user)
         {
             User = user;
         }

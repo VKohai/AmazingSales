@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using AmazingSales.Domain.Entities.BadgeAnnouncement;
+using AmazingSales.Domain.Entities.AnnouncementEntities;
 using AmazingSales.Application.Interfaces.Repositories;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands.UpdateAnnouncement;
@@ -21,7 +21,7 @@ public class UpdateAnnouncementCommandHandler : IRequestHandler<UpdateAnnounceme
         if (updatedAnnouncement is null)
             return null;
 
-        updatedAnnouncement.AddDomainEvent(new AnnouncementUpdatedByIdEvent(updatedAnnouncement));
+        updatedAnnouncement.AddDomainEvent(new AnnouncementUpdatedEvent(updatedAnnouncement));
         await _unitOfWork.Save(cancellationToken);
         return updatedAnnouncement;
     }

@@ -1,13 +1,13 @@
 ﻿using AmazingSales.Domain.Common;
-using AmazingSales.Domain.Entities.BadgeAnnouncement;
+using AmazingSales.Domain.Entities.AnnouncementEntities;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands.UpdateAnnouncement;
 
-public class AnnouncementUpdatedByIdEvent : BaseEvent
+public class AnnouncementUpdatedEvent : BaseEvent
 {
     public Announcement Announcement { get; }
 
-    public AnnouncementUpdatedByIdEvent(Announcement updatedAnnouncement)
+    public AnnouncementUpdatedEvent(Announcement updatedAnnouncement)
     {
         Announcement = updatedAnnouncement;
     }

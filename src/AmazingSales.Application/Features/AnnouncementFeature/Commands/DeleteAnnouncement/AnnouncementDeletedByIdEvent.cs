@@ -1,5 +1,5 @@
 ﻿using AmazingSales.Domain.Common;
-using AmazingSales.Domain.Entities.BadgeAnnouncement;
+using AmazingSales.Domain.Entities.AnnouncementEntities;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands;
 

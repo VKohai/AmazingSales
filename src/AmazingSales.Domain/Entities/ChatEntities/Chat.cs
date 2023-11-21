@@ -1,8 +1,8 @@
 using AmazingSales.Domain.Common;
-using AmazingSales.Domain.Entities.BadgeAnnouncement;
-using AmazingSales.Domain.Entities.BadgeProfile;
+using AmazingSales.Domain.Entities.AnnouncementEntities;
+using AmazingSales.Domain.Entities.ProfileEntities;
 
-namespace AmazingSales.Domain.Entities.BadgeChat
+namespace AmazingSales.Domain.Entities.ChatEntities
 {
     public sealed class Chat : BaseAuditableEntity
     {

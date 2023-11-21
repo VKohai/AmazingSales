@@ -1,8 +1,8 @@
 using AmazingSales.Domain.Enums;
 using AmazingSales.Domain.Common;
-using AmazingSales.Domain.Entities.BadgeProfile;
+using AmazingSales.Domain.Entities.ProfileEntities;
 
-namespace AmazingSales.Domain.Entities.BadgeAnnouncement
+namespace AmazingSales.Domain.Entities.AnnouncementEntities
 {
     public sealed class Announcement : BaseAuditableEntity
     {

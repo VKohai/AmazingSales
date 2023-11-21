@@ -1,7 +1,7 @@
 using AmazingSales.Domain.Enums;
 using AmazingSales.Domain.Common;
 
-namespace AmazingSales.Domain.Entities.BadgeProfile
+namespace AmazingSales.Domain.Entities.ProfileEntities
 {
     public sealed class Profile : BaseAuditableEntity
     {

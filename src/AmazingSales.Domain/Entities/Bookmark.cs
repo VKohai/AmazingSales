@@ -1,5 +1,5 @@
-using AmazingSales.Domain.Entities.BadgeProfile;
-using AmazingSales.Domain.Entities.BadgeAnnouncement;
+using AmazingSales.Domain.Entities.ProfileEntities;
+using AmazingSales.Domain.Entities.AnnouncementEntities;
 
 namespace AmazingSales.Domain.ValueObjects
 {
