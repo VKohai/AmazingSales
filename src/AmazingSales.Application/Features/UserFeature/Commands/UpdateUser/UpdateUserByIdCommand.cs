@@ -4,10 +4,7 @@ using AmazingSales.Application.Interfaces.Repositories;
 
 namespace AmazingSales.Application.Features.UserFeature.Commands
 {
-    public record UpdateUserByIdCommand : IRequest<User?>
-    {
-        public long Id { get; set; }
-    }
+    public record UpdateUserByIdCommand(long Id) : IRequest<User?>;
 
     public class UpdateUserByIdCommandHandler : IRequestHandler<UpdateUserByIdCommand, User?>
     {

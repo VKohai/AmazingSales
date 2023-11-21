@@ -18,24 +18,25 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
         public Address Address { get; private set; }
         public AnnouncementType AnnouncementType { get; private set; }
         public ContactMethod ContactMethod { get; private set; }
+
         public Announcement(
             string header,
             string description,
             decimal price,
-            bool? autopublishing,
             PublicationStatus? publicationStatus,
-            int views,
             Category category,
             Profile profile,
             Address address,
             AnnouncementType announcementType,
-            ContactMethod? contactMethod
+            ContactMethod? contactMethod,
+            bool autopublishing = true,
+            int views = 0
         )
         {
             Header = header;
             Description = description;
             Price = price;
-            Autopublishing = autopublishing ?? true;
+            Autopublishing = autopublishing;
             Created = DateTime.UtcNow;
             PublicationStatus = publicationStatus ?? PublicationStatus.Draft;
             Views = views;

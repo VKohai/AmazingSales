@@ -4,10 +4,7 @@ using AmazingSales.Application.Interfaces.Repositories;
 
 namespace AmazingSales.Application.Features.UserFeature.Commands
 {
-    public record DeleteUserByIdCommand : IRequest<User?>
-    {
-        public long Id { get; set; }
-    }
+    public record DeleteUserByIdCommand(long Id) : IRequest<User?>;
 
     internal class DeleteUserByIdCommandHandler : IRequestHandler<DeleteUserByIdCommand, User?>
     {
