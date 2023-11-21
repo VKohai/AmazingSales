@@ -1,8 +1,7 @@
 ﻿using MediatR;
-using AmazingSales.Domain.Enums;
+using AmazingSales.Domain.Entities.Enums;
 using AmazingSales.Domain.Entities.BadgeAnnouncement;
 using AmazingSales.Application.Interfaces.Repositories;
-using AmazingSales.Domain.Entities.Enums;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands;
 

@@ -4,20 +4,20 @@ using AmazingSales.Application.Interfaces.Repositories;
 
 namespace AmazingSales.Application.Features.UserFeature.Commands
 {
-    public record UpdateUserByIdCommand(long Id) : IRequest<User?>;
+    public record UpdateUserCommand(User User) : IRequest<User?>;
 
-    public class UpdateUserByIdCommandHandler : IRequestHandler<UpdateUserByIdCommand, User?>
+    public class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, User?>
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public UpdateUserByIdCommandHandler(IUnitOfWork unitOfWork)
+        public UpdateUserCommandHandler(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<User?> Handle(UpdateUserByIdCommand request, CancellationToken cancellationToken)
+        public async Task<User?> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
-            var updatedUser = await _unitOfWork.Repository<User, long>().UpdateByIdAsync(request.Id);
+            var updatedUser = await _unitOfWork.Repository<User, long>().UpdateAsync(request.User);
             if (updatedUser is null)
                 return null;
 
