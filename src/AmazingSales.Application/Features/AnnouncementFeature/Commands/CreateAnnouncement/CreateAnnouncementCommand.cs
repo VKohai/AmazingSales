@@ -7,7 +7,7 @@ using AmazingSales.Application.Interfaces.Repositories;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands;
 
-public record CreateAnnouncementCommand : IRequest<long>
+public record CreateAnnouncementCommand : IRequest<Announcement>
 {
     public string Header { get; set; }
     public string Description { get; set; }
@@ -23,7 +23,7 @@ public record CreateAnnouncementCommand : IRequest<long>
     public ContactMethod ContactMethod { get; set; }
 }
 
-internal class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnouncementCommand, long>
+internal class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnouncementCommand, Announcement>
 {
     private readonly IUnitOfWork _unitOfWork;
 
@@ -32,7 +32,7 @@ internal class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnounce
         _unitOfWork = unitOfWork;
     }
 
-    public async Task<long> Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken)
+    public async Task<Announcement> Handle(CreateAnnouncementCommand request, CancellationToken cancellationToken)
     {
         var announcement = new Announcement(
             header: request.Header,
@@ -49,7 +49,6 @@ internal class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnounce
 
         announcement = await _unitOfWork.Repository<Announcement, long>().AddAsync(announcement);
         announcement.AddDomainEvent(new AnnouncementCreatedEvent(announcement));
-        await _unitOfWork.Save(cancellationToken);
-        return announcement.Id;
+        return announcement;
     }
 }

@@ -13,7 +13,7 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
         public WorkDays WorkDays { get; private set; }
         public AnnouncementService(
             Announcement announcement,
-            PaymentPer? payment,
+            PaymentPer? paymentPer,
             DateTime? startTime,
             DateTime? endTime,
             WorkDays workDays,
@@ -22,7 +22,7 @@ namespace AmazingSales.Domain.Entities.BadgeAnnouncement
         {
             Announcement = announcement;
             IsStartingPrice = isStartingPrice;
-            PaymentPer = payment ?? PaymentPer.Service;
+            PaymentPer = paymentPer ?? PaymentPer.Service;
             StartTime = startTime;
             EndTime = endTime;
             WorkDays = workDays;
