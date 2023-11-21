@@ -10,8 +10,9 @@ namespace AmazingSales.Domain.Entities.BadgeProfile
             long id,
             string imageUrl,
             ProfessionalProfile professionalProfile
-        ) : base(id)
+        )
         {
+            Id = id;
             ImageUrl = imageUrl;
             ProfessionalProfile = professionalProfile;
         }

@@ -10,12 +10,11 @@ namespace AmazingSales.Domain.Entities.BadgeProfile
         public Address? Address { get; private set; }
         public ICollection<ProfessionalProfileImage> ImagesUrl { get; private set; }
         public ProfessionalProfile(
-            long id,
             Profile? profile,
             string? aboutCompany,
             string? shortDescription,
             Address? address,
-            ICollection<ProfessionalProfileImage>? imagesUrl = null) : base(id)
+            ICollection<ProfessionalProfileImage>? imagesUrl = null)
         {
             Profile = profile;
             AboutCompany = aboutCompany ?? string.Empty;

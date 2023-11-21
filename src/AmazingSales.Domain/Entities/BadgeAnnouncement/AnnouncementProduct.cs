@@ -1,8 +1,7 @@
 using AmazingSales.Domain.Enums;
 using AmazingSales.Domain.Common;
-using AmazingSales.Domain.Entities.BadgeAnnouncement;
 
-namespace AmazingSales.Domain.ValueObjects
+namespace AmazingSales.Domain.Entities.BadgeAnnouncement
 {
     public sealed record AnnouncementProduct : ValueObject
     {
