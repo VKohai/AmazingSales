@@ -1,7 +1,7 @@
 using AmazingSales.Domain.Common;
 using AmazingSales.Domain.Entities;
 
-namespace AmazingSales.Application.Features.UserFeature.Commands.CreateUser
+namespace AmazingSales.Application.Features.UserFeature.Commands
 {
     public class UserCreatedEvent : BaseEvent
     {

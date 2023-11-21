@@ -2,7 +2,7 @@ using MediatR;
 using AmazingSales.Domain.Entities;
 using AmazingSales.Application.Interfaces.Repositories;
 
-namespace AmazingSales.Application.Features.UserFeature.Commands.DeleteUserById
+namespace AmazingSales.Application.Features.UserFeature.Commands
 {
     public record DeleteUserByIdCommand : IRequest<User?>
     {

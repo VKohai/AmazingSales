@@ -2,7 +2,7 @@ using MediatR;
 using AmazingSales.Domain.Entities;
 using AmazingSales.Application.Interfaces.Repositories;
 
-namespace AmazingSales.Application.Features.UserFeature.Commands.CreateUser
+namespace AmazingSales.Application.Features.UserFeature.Commands
 {
     public record CreateUserCommand : IRequest<long>
     {
