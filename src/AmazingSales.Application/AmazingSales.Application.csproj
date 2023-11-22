@@ -12,7 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Features\AnnouncementFeature\Queries\"/>
         <Folder Include="Features\ChatFeature\Commands\"/>
         <Folder Include="Features\ChatFeature\Queries\"/>
         <Folder Include="Features\ProfileFeature\Commands\"/>

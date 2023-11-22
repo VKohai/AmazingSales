@@ -1,14 +1,14 @@
 using AmazingSales.Domain.Enums;
-using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Domain.Entities.AnnouncementEntities
 {
-    public sealed record AnnouncementProduct : ValueObject
+    public sealed record AnnouncementProduct
     {
         public Announcement Announcement { get; private set; }
         public int Amount { get; set; }
         public ProductStatus ProductStatus { get; set; }
         public ProductSellingType ProductSellingType { get; set; }
+
         public AnnouncementProduct(
             Announcement announcement,
             int amount,
@@ -22,13 +22,8 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
             ProductSellingType = productSellingType;
         }
 
-        protected override IEnumerable<object> GetEqualityComponents()
+        public AnnouncementProduct()
         {
-            yield return Announcement;
-            yield return Amount;
-            yield return ProductStatus;
-            yield return ProductSellingType;
         }
-
     }
 }

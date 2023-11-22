@@ -1,9 +1,8 @@
-using AmazingSales.Domain.Common;
 using AmazingSales.Domain.Entities.Enums;
 
 namespace AmazingSales.Domain.Entities.AnnouncementEntities
 {
-    public sealed record AnnouncementService : ValueObject
+    public sealed record AnnouncementService
     {
         public Announcement Announcement { get; private set; }
         public bool IsStartingPrice { get; private set; }
@@ -11,6 +10,7 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
         public DateTime? StartTime { get; private set; }
         public DateTime? EndTime { get; private set; }
         public WorkDays WorkDays { get; private set; }
+
         public AnnouncementService(
             Announcement announcement,
             PaymentPer? paymentPer,
@@ -28,15 +28,8 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
             WorkDays = workDays;
         }
 
-        protected override IEnumerable<object> GetEqualityComponents()
+        public AnnouncementService()
         {
-            yield return Announcement;
-            yield return IsStartingPrice;
-            yield return PaymentPer;
-            yield return StartTime!;
-            yield return EndTime!;
-            yield return WorkDays;
         }
-
     }
 }
