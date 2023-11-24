@@ -1,14 +1,14 @@
 ﻿using MediatR;
 using AutoMapper;
-using AmazingSales.Domain.Enums;
 using AmazingSales.Application.Interfaces.Repositories;
 using AmazingSales.Domain.Entities.AnnouncementEntities;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Queries;
 
-public record GetAnnouncementByIdQuery(long Id) : IRequest<GetAnnouncementByIdDto>;
+public record GetAnnouncementByIdQuery(long Id) : IRequest<Announcement>;
 
-public class GetAnnouncementByIdQueryHandler : IRequestHandler<GetAnnouncementByIdQuery, GetAnnouncementByIdDto>
+public class
+    GetAnnouncementByIdQueryHandler : IRequestHandler<GetAnnouncementByIdQuery, Announcement>
 {
     private readonly IMapper _mapper;
     private readonly IUnitOfWork _unitOfWork;
@@ -19,13 +19,11 @@ public class GetAnnouncementByIdQueryHandler : IRequestHandler<GetAnnouncementBy
         _mapper = mapper;
     }
 
-    public async Task<GetAnnouncementByIdDto> Handle(
+    public async Task<Announcement> Handle(
         GetAnnouncementByIdQuery request,
         CancellationToken cancellationToken)
     {
         var announcement = await _unitOfWork.Repository<Announcement, long>().GetByIdAsync(request.Id);
-
-        var announcmentDto = _mapper.Map<GetAnnouncementByIdDto>(announcement);
-        return announcmentDto;
+        return announcement;
     }
 }

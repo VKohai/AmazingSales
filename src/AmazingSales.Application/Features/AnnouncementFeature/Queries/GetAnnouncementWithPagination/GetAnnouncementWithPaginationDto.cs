@@ -6,7 +6,7 @@ using AmazingSales.Domain.Entities.AnnouncementEntities;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Queries;
 
-public class GetAnnouncementByIdDto
+public class GetAnnouncementWithPaginationDto
 {
     public string Header { get; set; }
     public string Description { get; set; }
