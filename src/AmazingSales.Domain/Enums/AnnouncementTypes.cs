@@ -1,6 +1,6 @@
 namespace AmazingSales.Domain.Enums
 {
-    public enum AnnouncementType
+    public enum AnnouncementTypes
     {
         Products,
         Services

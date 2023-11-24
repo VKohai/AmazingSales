@@ -15,6 +15,7 @@ public record CreateAnnouncementServiceCommand : IRequest<long>
     public WorkDays WorkDays { get; set; }
 }
 
+[Obsolete("Never use this")]
 internal class CreateAnnouncementServiceCommandHandler : IRequestHandler<CreateAnnouncementServiceCommand, long>
 {
     private readonly IUnitOfWork _unitOfWork;

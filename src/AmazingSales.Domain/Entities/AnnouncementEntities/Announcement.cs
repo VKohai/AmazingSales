@@ -16,7 +16,9 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
         public Category Category { get; private set; }
         public Profile Profile { get; private set; }
         public Address Address { get; private set; }
+
         public AnnouncementType AnnouncementType { get; private set; }
+        public AnnouncementTypes AnnouncementTypes { get; private set; }
         public ContactMethod ContactMethod { get; private set; }
 
         public Announcement(
@@ -28,6 +30,7 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
             Profile profile,
             Address address,
             AnnouncementType announcementType,
+            AnnouncementTypes announcementTypes,
             ContactMethod? contactMethod,
             bool autopublishing = true,
             int views = 0
@@ -44,6 +47,7 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
             Profile = profile;
             Address = address;
             AnnouncementType = announcementType;
+            AnnouncementTypes = announcementTypes;
             ContactMethod = contactMethod ?? ContactMethod.MessagesAndCalls;
         }
     }

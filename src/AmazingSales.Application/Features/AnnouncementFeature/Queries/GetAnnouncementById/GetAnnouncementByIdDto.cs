@@ -1,4 +1,5 @@
 ﻿using AmazingSales.Domain.Enums;
+using AmazingSales.Domain.Common;
 using AmazingSales.Domain.Entities;
 using AmazingSales.Domain.Entities.ProfileEntities;
 using AmazingSales.Domain.Entities.AnnouncementEntities;
@@ -17,8 +18,7 @@ public class GetAnnouncementByIdDto
     public Category Category { get; set; }
     public Profile Profile { get; set; }
     public Address Address { get; set; }
-    public AnnouncementType AnnouncementType { get; set; }
+    public AnnouncementType? AnnouncementType { get; set; }
+    public AnnouncementTypes AnnouncementTypes { get; set; }
     public ContactMethod ContactMethod { get; set; }
-    public AnnouncementProduct? AnnouncementProduct { get; set; } = null;
-    public AnnouncementService? AnnouncementService { get; set; } = null;
 }

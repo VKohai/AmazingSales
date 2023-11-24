@@ -13,6 +13,7 @@ public record CreateAnnouncementProductCommand : IRequest<long>
     public ProductSellingType ProductSellingType { get; set; }
 }
 
+[Obsolete("Never use this")]
 internal class CreateAnnouncementProductCommandHandler : IRequestHandler<CreateAnnouncementProductCommand, long>
 {
     private readonly IUnitOfWork _unitOfWork;

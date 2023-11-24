@@ -5,7 +5,7 @@ using AmazingSales.Application.Interfaces.Repositories;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands;
 
-public record DeleteAnnouncementByIdCommand(long Id, AnnouncementType AnnouncementType) : IRequest<Announcement?>;
+public record DeleteAnnouncementByIdCommand(long Id, AnnouncementTypes AnnouncementTypes) : IRequest<Announcement?>;
 
 internal class DeleteAnnouncementByIdCommandHandler : IRequestHandler<DeleteAnnouncementByIdCommand, Announcement?>
 {

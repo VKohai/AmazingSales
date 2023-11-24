@@ -1,8 +1,9 @@
+using AmazingSales.Domain.Common;
 using AmazingSales.Domain.Entities.Enums;
 
 namespace AmazingSales.Domain.Entities.AnnouncementEntities
 {
-    public sealed record AnnouncementService
+    public sealed class AnnouncementService : AnnouncementType
     {
         public Announcement Announcement { get; private set; }
         public bool IsStartingPrice { get; private set; }

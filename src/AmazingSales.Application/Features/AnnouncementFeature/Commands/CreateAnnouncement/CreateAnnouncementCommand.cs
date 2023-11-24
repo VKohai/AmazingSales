@@ -4,6 +4,7 @@ using AmazingSales.Domain.Entities;
 using AmazingSales.Domain.Entities.ProfileEntities;
 using AmazingSales.Domain.Entities.AnnouncementEntities;
 using AmazingSales.Application.Interfaces.Repositories;
+using AmazingSales.Domain.Common;
 
 namespace AmazingSales.Application.Features.AnnouncementFeature.Commands;
 
@@ -20,6 +21,7 @@ public record CreateAnnouncementCommand : IRequest<Announcement>
     public Profile Profile { get; set; }
     public Address Address { get; set; }
     public AnnouncementType AnnouncementType { get; set; }
+    public AnnouncementTypes AnnouncementTypes { get; set; }
     public ContactMethod ContactMethod { get; set; }
 }
 
@@ -43,12 +45,14 @@ internal class CreateAnnouncementCommandHandler : IRequestHandler<CreateAnnounce
             profile: request.Profile,
             address: request.Address,
             announcementType: request.AnnouncementType,
+            announcementTypes: request.AnnouncementTypes,
             contactMethod: request.ContactMethod,
             autopublishing: request.Autopublishing
         );
 
         announcement = await _unitOfWork.Repository<Announcement, long>().AddAsync(announcement);
         announcement.AddDomainEvent(new AnnouncementCreatedEvent(announcement));
+        await _unitOfWork.Save(cancellationToken);
         return announcement;
     }
 }
