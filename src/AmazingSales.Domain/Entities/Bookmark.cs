@@ -3,7 +3,7 @@ using AmazingSales.Domain.Entities.AnnouncementEntities;
 
 namespace AmazingSales.Domain.ValueObjects
 {
-    public sealed record Bookmark
+    public sealed class Bookmark
     {
         public Profile Profile { get; private set; }
         public Announcement Announcement { get; private set; }
