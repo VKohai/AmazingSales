@@ -5,7 +5,6 @@ namespace AmazingSales.Domain.Entities.AnnouncementEntities
 {
     public sealed class AnnouncementService : AnnouncementType
     {
-        public Announcement Announcement { get; private set; }
         public bool IsStartingPrice { get; private set; }
         public PaymentPer PaymentPer { get; private set; }
         public DateTime? StartTime { get; private set; }
