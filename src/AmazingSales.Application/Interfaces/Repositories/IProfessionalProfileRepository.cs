@@ -2,6 +2,6 @@
 
 namespace AmazingSales.Application.Interfaces.Repositories;
 
-public interface IProfessionalProfileImageRepository : IGenericRepository<ProfessionalProfileImage, long>
+public interface IProfessionalProfileRepository : IGenericRepository<ProfessionalProfile, long>
 {
 }
